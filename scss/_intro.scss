@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700;800;900&display=swap');
+
+.intro {
+  width: 100vw;
+  height: 400vh;
+  
+  &__tit{
+    position: fixed;
+    top: 40vh;
+    left: 45vw;
+    margin-bottom: 8vw;
+    transform: translate(-50%, -50%);
+    font-family: 'Vollkorn', serif;
+    font-size: 12vw;
+    letter-spacing: -10px;
+    white-space: nowrap;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  &__tit span {
+    display: inline-block;
+  }
+
+  &__img {
+    position: fixed;
+    width: 20vw;
+    right: 5vw;
+    bottom: 3vw;
+    // transition: all0.3 linear;
+  }
+}
