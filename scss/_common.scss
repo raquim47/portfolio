@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'bodoni';
+  src: url(../fonts/BodoniXT.ttf);
+}
+
+.container {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-left: -16px;
+  margin-right: -16px;
+}
