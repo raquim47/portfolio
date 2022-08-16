@@ -14,7 +14,7 @@ label,img,input,select,textarea,button,a {vertical-align:middle;}
 u,ins,a{text-decoration:none;}
 button { cursor: pointer; background: none;}
 img { display: block; width: 100%;}
-a {color: inherit; display: block;}
+a {color: inherit;}
 
 /* Normalize */
 body { font-family: 'Noto Sans KR', sans-serif; }
