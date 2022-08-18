@@ -1,0 +1,382 @@
+// z-index
+$z1: 1;
+$z2: 10;
+$z3: 100;
+$z4: 1000;
+
+.fixed-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* scroll */
+.scroll {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  z-index: 1000;
+}
+
+// wrapper-all
+.wrapper-all {
+  height: 10000px;
+  background: #fff;
+  font-family: 'GmarketSans';
+}
+
+// header
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  padding: 0 3%;
+  mix-blend-mode: difference;
+  z-index: $z4;
+
+  .logo,
+  .site-menu {
+    padding: 20px 0;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
+
+// 1층 바닥배경
+.layer1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+// 2층 절반 이미지 - 0 ~ 1500
+.layer2 {
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: url(https://images.unsplash.com/photo-1659194612634-38b6281e150b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1015&q=80) center no-repeat;
+  background-size: cover;
+}
+
+// 3층 중앙 메인 텍스트 - 0 ~ 1600
+.layer3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 8vw;
+  line-height: 1;
+  font-weight: 300;
+  white-space: nowrap;
+  mix-blend-mode: difference;
+}
+
+// 4층 플립 - 1600 ~ 4000
+.layer4 {
+  position: absolute;
+  right: 22%;
+  bottom: 50%;
+  width: 20vw;
+  height: 20vw;
+  transform: translate(50%, 50%);
+}
+
+.flip {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+
+  &__front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: url(../img/profile.png) no-repeat center center;
+    background-size: cover;
+    backface-visibility: hidden;
+    z-index: $z1;
+  }
+
+  &__back {
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: rotateY(180deg);
+  }
+
+  &__svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+  }
+}
+
+// 5층 아래에서 등장하는 about 텍스트
+.layer5 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.aboutme {
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  width: 50%;
+  transform: translateY(-50%);
+  font-size: 4.2vw;
+}
+
+// 6층 왼쪽으로 나타나는 인덱스 - 4000 ~ 4600
+.layer6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-left: 1px solid #757575;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    padding-left: 12%;
+    border-bottom: 1px solid #757575;
+    font-family: 'GmarketSans';
+    font-size: 5vw;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__itme:last-child {
+    border: none;
+  }
+
+  &__white {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: #fff;
+  }
+}
+
+// 7층 슬라이드 전환 4649 ~ 5350
+.layer7 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+
+  &__bg {
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0);
+  }
+
+  h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-family: 'GmarketSans';
+    font-size: 9vw;
+    font-weight: 600;
+    mix-blend-mode: overlay;
+    color: #000;
+    text-transform: uppercase;
+  }
+}
+
+.slide-row {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  li {
+    position: relative;
+    flex: 1;
+  }
+
+  span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+  }
+}
+
+.slide-col {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  li {
+    flex: 1;
+    position: relative;
+  }
+
+  span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #000;
+  }
+}
+
+// 8층 sitework 작업물 5350 ~
+.sitework {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  &__left {
+    position: relative;
+    width: 26%;
+    height: 100%;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    width: 0vw;
+    height: 100%;
+    background: #fff;
+  }
+}
+
+.progress {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  // width: 100%;
+  display: flex;
+  color: #fff;
+  font-family: 'GmarketSans';
+  font-weight: 500;
+  align-items: center;
+  transform: translate(-50%, -50%) rotate(-90deg);
+
+  &__line {
+    height: 2px;
+    width: 8vw;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 30px;
+  }
+
+  &__line-white {
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: #fff;
+  }
+}
+
+.mokeup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 28vw;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // &__img.img01 {
+  //   z-index: 10;
+  // }
+}
+
+.sitework-txt {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  margin-left: auto;
+
+  &__item {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding-right: 20%;
+  }
+
+  strong {
+    font-size: 15vw;
+    color: #e7e7e7;
+  }
+
+  h3 {
+    font-size: 4vw;
+    margin-top: -11vw;
+    text-transform: uppercase;
+  }
+
+  p {
+    padding-top: 7vw;
+    font-size: 18px;
+  }
+
+  .btn {
+    margin-top: 2vw;
+  }
+  
+  .btn a {
+    margin-right: 2vw;
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
