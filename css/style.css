@@ -215,6 +215,8 @@
      object-fit: cover;
   -webkit-filter: saturate(0);
           filter: saturate(0);
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 
 .layer7 h3 {
@@ -225,7 +227,7 @@
           transform: translate(-50%, -50%);
   white-space: nowrap;
   font-family: 'GmarketSans';
-  font-size: 9vw;
+  font-size: 13vw;
   font-weight: 600;
   mix-blend-mode: overlay;
   color: #000;
@@ -526,7 +528,7 @@
 
 .card li {
   width: 40%;
-  padding: 3vw;
+  padding: 5vw 3vw 4vw;
   margin-bottom: 8%;
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -589,8 +591,8 @@
 }
 
 .card__tit {
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 3vw;
+  margin-bottom: 3.2vw;
   font-size: 3vw;
   text-align: center;
   -webkit-transition: all 0.3s ease;
@@ -598,8 +600,9 @@
 }
 
 .card__desc {
+  font-size: 1.2vw;
   color: #585858;
-  margin-bottom: 30px;
+  margin-bottom: 3vw;
 }
 
 .card__btn {

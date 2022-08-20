@@ -102,7 +102,7 @@
       </div>
       <!-- layer7 -->
       <div class="layer7" data-4649="opacity:0" data-4650="opacity:1">
-        <img class="layer7__bg" src="img/cont7_bg.jpg" alt="배경">
+        <img class="layer7__bg" data-4900="transform:scale(1)" data-5050="transform:scale(2)" src="img/cont7_bg.jpg" alt="배경">
         <ul class="slide-row">
           <li><span data-4650="height:100%" data-4800="height:0%"></span></li>
           <li><span data-4700="height:100%" data-4850="height:0%"></span></li>
@@ -258,7 +258,6 @@
   </section>
   <section></section>
 
-  <!-- <script src="https://kit.fontawesome.com/0d80c14f2f.js" crossorigin="anonymous"></script> -->
   <script src="js/smooth.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script> -->
   <script src="js/skrollr.js"></script>
@@ -281,24 +280,28 @@
       const progressbar = document.querySelector('.progress__line-white');
       const progressNum = document.querySelector('.setnumber');
 
-      if (scrollTop >= 5600 && scrollTop <= 6100) {
-        progressbar.style.width = `${scrollTop/5 - 1120}%`
-      }
+      
 
-      if (scrollTop >= 6100 && scrollTop <= 6600) {
-        progressbar.style.width = `${scrollTop/5 - 1220}%`
+      if (scrollTop > 6100 && scrollTop <= 6600) {
+        progressbar.style.width = `${scrollTop/5 - 1220}%`;
         progressNum.innerHTML = '02';
       }
 
-      if (scrollTop >= 6600 && scrollTop <= 7100) {
-        progressbar.style.width = `${scrollTop/5 - 1320}%`
+      if (scrollTop > 6600 && scrollTop <= 7100) {
+        progressbar.style.width = `${scrollTop/5 - 1320}%`;
         progressNum.innerHTML = '03';
       }
 
-      if (scrollTop >= 7100 && scrollTop <= 7600) {
-        progressbar.style.width = `${scrollTop/5 - 1420}%`
+      if (scrollTop > 7100 && scrollTop <= 7600) {
+        progressbar.style.width = `${scrollTop/5 - 1420}%`;
         progressNum.innerHTML = '04';
       }
+
+      if (scrollTop >= 5600 && scrollTop <= 6100) {
+        progressbar.style.width = `${scrollTop/5 - 1120}%`;
+        progressNum.innerHTML = '01';
+      }
+      
       const coverRow1 = document.querySelectorAll('.cover-row1 li');
       const coverRow2 = document.querySelectorAll('.cover-row2 li span');
 
@@ -328,6 +331,8 @@
         });
       }
     });
+
+
     // SCRIPT 글자쪼개기
     document.querySelectorAll('.script-tit').forEach(el => {
       let text = el.innerText;
