@@ -81,6 +81,18 @@
   mix-blend-mode: difference;
 }
 
+.layer3 .circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 0vw;
+  height: 0vw;
+  border-radius: 50%;
+  background-color: #000;
+}
+
 .layer4 {
   position: absolute;
   right: 22%;
@@ -141,10 +153,11 @@
   position: absolute;
   top: 100%;
   left: 10%;
-  width: 50%;
+  width: 40%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  font-size: 4.2vw;
+  font-size: 3.2vw;
+  font-weight: 300;
 }
 
 .layer6 {

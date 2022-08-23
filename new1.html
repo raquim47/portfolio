@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style1.css">
+  <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+  <title>HONG PORTFOLIO</title>
+</head>
+
+<body>
+  <!-- scroll -->
+  <div class="scroll">0</div>
+  <main class="wrapper-all">
+    <div class="fixed-view">
+      <!-- header -->
+      <header class="header">
+        <h1 class="logo">
+          <a href="#">portfolio</a>
+        </h1>
+        <div class="site-menu"><a href="#">menu</a></div>
+      </header>
+      <!-- layer1 -->
+      <div class="layer1"></div>
+      <!-- layer2 -->
+      <div class="layer2" data-0="left: 50%" data-1500="left: -100%">
+      </div>
+      <!-- layer3 2500 -->
+      <div class="layer3">
+        <!-- "PORTFOLIO" -->
+        <div data-400="transform: translatex(0%) scale(1); opacity: 1"
+          data-1400="transform: translatex(30%) scale(1); opacity: 1"
+          data-2000="transform: translatex(30%) scale(0.8); opacity: 0">
+          PORTFOLIO
+        </div>
+        <!-- "HONG SEONG JIN" -->
+        <div data-300="transform: translatex(0%) scale(1); opacity: 1"
+          data-1400="transform: translatex(-50%) scale(1); opacity: 1"
+          data-2000="transform: translatex(-50%) scale(0.8); opacity: 0">HONG SEONG JIN</div>
+        <!-- "FRONTEND" -->
+        <div data-400="transform: translatex(0%) scale(1); opacity: 1"
+          data-1400="transform: translatex(50%) scale(1); opacity: 1;"
+          data-2000="transform: translatex(50%) scale(0.8); opacity: 0">
+          FRONTEND</div>
+      </div>
+      <!-- layer4 -->
+      <div class="layer4" data-2400="background-color:rgba(0,0,0,0)" data-2500="background-color:rgba(0,0,0,1)">
+        <div class="circle" data-1400="width:0vw; height:0vw" data-2400="width:200vw; height:200vw">
+        </div>
+        <ul class="about">
+          <li data-2500="transform:translatey(-100%)" data-3100="transform:translatey(0%)"><strong class="a">A</strong></li>
+          <li data-2800="transform:translatey(100%)" data-3400="transform:translatey(0%)">
+            <strong class="b">B</strong>
+            <span class="b">
+              안녕하세요! 프론트앤드 개발자<br>
+              홍승진입니다.
+            </span>
+          </li>
+          <li data-3100="transform:translatey(-100%)" data-3700="transform:translatey(0%)">
+            <strong class="o">O</strong>
+            <span class="o">
+              어떤 일이라도 노력하고 즐기면 그 결과는 빛을 발한다고 생각합니다.
+            </span>
+          </li>
+          <li data-3400="transform:translatey(100%)" data-4000="transform:translatey(0%)"><img src="img/profile.png" alt="프로필"><strong class="u">U</strong></li>
+          <li data-3700="transform:translatey(-100%)" data-4300="transform:translatey(0%)">
+            <strong class="t">T</strong>
+            <span class="t">
+              신입의 열정과 도전정신을 깊숙히 파고드는 개발자가 되겠습니다.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <script src="js/skrollr.js"></script>
+  <script>
+    // 스크롤러 실행
+    const s = skrollr.init({
+      smoothScrolling: true,
+      scale: 1
+    });
+    // 스크롤 확인
+    function scroll() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      document.querySelector(".scroll").innerHTML = scrollTop;
+      requestAnimationFrame(scroll);
+    }
+    scroll();
+  </script>
+</body>
+
+</html>

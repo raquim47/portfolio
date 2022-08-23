@@ -85,6 +85,17 @@ $z4: 1000;
   font-weight: 300;
   white-space: nowrap;
   mix-blend-mode: difference;
+
+  .circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0vw;
+    height: 0vw;
+    border-radius: 50%;
+    background-color: #000;
+  }
 }
 
 // 4층 플립 - 1600 ~ 4000
@@ -144,9 +155,10 @@ $z4: 1000;
   position: absolute;
   top: 100%;
   left: 10%;
-  width: 50%;
+  width: 40%;
   transform: translateY(-50%);
-  font-size: 4.2vw;
+  font-size: 3.2vw;
+  font-weight: 300;
 }
 
 // 6층 왼쪽으로 나타나는 인덱스 - 4000 ~ 4600

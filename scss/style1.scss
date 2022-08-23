@@ -1,0 +1,177 @@
+// z-index
+$z1: 1;
+$z2: 10;
+$z3: 100;
+$z4: 1000;
+
+@font-face {
+  font-family: 'Quakiez';
+  src: url(../fonts/Quakiez.ttf);
+}
+
+.fixed-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* scroll */
+.scroll {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  z-index: 1000;
+}
+
+// wrapper-all
+.wrapper-all {
+  height: 10000px;
+  background: #fff;
+  font-family: 'GmarketSans';
+}
+
+// header
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  padding: 0 3%;
+  mix-blend-mode: difference;
+  z-index: $z4;
+
+  .logo,
+  .site-menu {
+    padding: 20px 0;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
+
+// 1층 바닥배경
+.layer1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+// 2층 절반 이미지 - 0 ~ 1500
+.layer2 {
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: url(https://images.unsplash.com/photo-1659194612634-38b6281e150b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1015&q=80) center no-repeat;
+  background-size: cover;
+}
+
+// 3층 중앙 메인 텍스트 - 0 ~ 1600
+.layer3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 8vw;
+  line-height: 1;
+  font-weight: 300;
+  white-space: nowrap;
+  mix-blend-mode: difference;
+}
+
+// 4층 화면전환 circle
+.layer4 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  .circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    border-radius: 50%;
+  }
+
+  .about {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    li {
+      flex: 1;
+      position: relative;
+      background: #fff;
+
+      &:nth-child(2) {
+        border-left: 1px solid #999;
+        border-right: 1px solid #999;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    strong {
+      display: block;
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      font-family: 'Quakiez';
+      font-size: 19vw;
+      color: #000;
+
+      &.a {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &.b {
+        top: 40%;
+      }
+      &.o {
+        top: 20%;
+        transform: rotate(-25deg);
+      }
+
+      &.u {
+        bottom: 10%;
+        color: #fff;
+      }
+
+      &.t {
+        bottom: 35%;
+      }
+    }
+
+    span {
+      font-family: 'GmarketSans';
+      position: absolute;
+      font-weight: 400;
+      text-align: left;
+      left: 45%;
+      transform: translateX(-50%);
+      font-size: .8vw;
+      width: 58%;
+    }
+  }
+}
