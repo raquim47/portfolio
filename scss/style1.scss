@@ -32,7 +32,7 @@ $z4: 1000;
 
 // wrapper-all
 .wrapper-all {
-  height: 10000px;
+  height: 20000px;
   background: #fff;
   font-family: 'GmarketSans';
 }
@@ -141,17 +141,17 @@ $z4: 1000;
   .sitework-tit {
     position: absolute;
     top: 60%;
-    transform: translateY(-50%);
     left: 100%;
     color: #fff;
     white-space: nowrap;
+    transform: translateY(-50%);
 
     span {
       display: inline-block;
       font-size: 12vw;
       font-weight: 600;
       text-transform: uppercase;
-      transition: .2s ease-in;
+      transition: .1s ease-in-out;
       opacity: 0;
       transform: translateX(200%);
     }
@@ -171,6 +171,7 @@ $z4: 1000;
     position: relative;
     width: 26%;
     height: 100%;
+    // background-color: #000;
   }
 
   &__right {
@@ -254,8 +255,10 @@ $z4: 1000;
   }
 
   p {
+    width: 85%;
     padding-top: 7vw;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.4;
   }
 
   .btn {
@@ -263,11 +266,16 @@ $z4: 1000;
   }
 
   .btn a {
-    margin-right: 2vw;
-    color: #333;
-    font-size: 20px;
-    font-weight: 600;
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #3b3b3b;
+    border-radius: 10px;
+    margin-right: 20px;
+    color: #fff;
+    font-size: 14px;
+    font-weight:400;
     text-transform: uppercase;
+    z-index: $z3;
   }
 }
 
@@ -281,6 +289,7 @@ $z4: 1000;
   left: 0;
   width: 100%;
   height: 100%;
+  visibility: hidden;
 }
 
 .cover-row1 li {
