@@ -281,7 +281,7 @@
 
 .sitework-txt .btn a {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 8px 12px;
   background-color: #3b3b3b;
   border-radius: 10px;
   margin-right: 20px;
@@ -290,6 +290,10 @@
   font-weight: 400;
   text-transform: uppercase;
   z-index: 100;
+}
+
+.sitework-txt .btn a:hover {
+  background-color: #000;
 }
 
 .cover-row1,

@@ -267,7 +267,7 @@ $z4: 1000;
 
   .btn a {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 8px 12px;
     background-color: #3b3b3b;
     border-radius: 10px;
     margin-right: 20px;
@@ -277,6 +277,9 @@ $z4: 1000;
     text-transform: uppercase;
     z-index: $z3;
   }
+  .btn a:hover {
+    background-color: #000;
+  } 
 }
 
 .cover-row1,
