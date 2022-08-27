@@ -577,12 +577,12 @@
 }
 
 .layer8 .card {
+  border: 1px solid red;
   position: absolute;
   top: 0;
   right: -100%;
-  width: 100%;
+  width: 150%;
   height: 100%;
-  overflow: hidden;
 }
 
 .layer8 .card ul {
@@ -596,42 +596,39 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 130%;
+  width: 100%;
   height: 100%;
   padding-bottom: 5%;
 }
 
 .layer8 .card li {
+  margin-right: 30px;
   position: relative;
-  padding: 30px 25px;
   width: 300px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.layer8 .card__num {
-  font-size: 10vw;
-  color: #eeeeee;
 }
 
 .layer8 .card__tit {
-  margin-top: -5vw;
-  margin-left: 5vw;
-  margin-bottom: 2vw;
-  font-size: 3vw;
+  margin-left: -5vw;
+  font-size: 3.5vw;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  color: #000000;
+}
+
+.layer8 .card__num {
+  font-size: 6vw;
+  padding-right: 15px;
+  color: #d4d4d4;
 }
 
 .layer8 .card__img {
-  -webkit-filter: saturate(0);
-          filter: saturate(0);
-  margin-top: 2vw;
+  -webkit-filter: saturate(0.2);
+          filter: saturate(0.2);
 }
 
 .layer8 .card__img img {
   display: block;
-  width: 80%;
-  height: 120px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: all 0.3s ease;
@@ -646,30 +643,42 @@
 
 .layer8 .card__desc {
   padding: 0 6%;
-  font-size: 1.1vw;
+  font-size: 1.2vw;
   line-height: 1.8;
   letter-spacing: 3;
-  color: #585858;
-  margin-bottom: 2vw;
+  color: #000000;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
   font-weight: 300;
 }
 
 .layer8 .card__btn {
-  position: absolute;
-  bottom: 3vw;
-  right: 0px;
+  position: relative;
+  width: 100%;
 }
 
 .layer8 .card__btn button {
   display: block;
   width: 110px;
-  padding: 10px 0;
-  background-color: #d8ab95;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #000;
   color: #fff;
   margin-bottom: 1vw;
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.layer8 .card__btn button:nth-child(1) {
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+}
+
+.layer8 .card__btn button:hover {
+  background-color: #585858;
+  color: #fff;
 }
 
 .layer8 .dice {

@@ -523,12 +523,12 @@ $z4: 1000;
   }
 
   .card {
+    border: 1px solid red;
     position: absolute;
     top: 0;
     right: -100%;
-    width: 100%;
+    width: 150%;
     height: 100%;
-    overflow: hidden;
 
     ul {
       position: absolute;
@@ -536,44 +536,36 @@ $z4: 1000;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      width: 130%;
+      width: 100%;
       height: 100%;
       padding-bottom: 5%;
     }
 
     li {
+      margin-right: 30px;
       position: relative;
-      padding: 30px 25px;
       width: 300px;
-      // margin-right: 100px;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    &__num {
-      font-size: 10vw;
-      color: #eeeeee;
     }
 
     &__tit {
-      margin-top: -5vw;
-      margin-left: 5vw;
-      margin-bottom: 2vw;
-      font-size: 3vw;
+      margin-left: -5vw;
+      font-size: 3.5vw;
       transition: all 0.3s ease;
+      color: #000000;
+    }
+
+    &__num {
+      font-size: 6vw;
+      padding-right: 15px;
+      color: #d4d4d4;
     }
 
     &__img {
-      filter: saturate(0);
-      margin-top: 2vw;
-      // display: flex;
-      // align-items: center;
-      // justify-content: center;
-      // position: relative;
+      filter: saturate(0.2);
 
       img {
         display: block;
-        width: 80%;
-        height: 120px;
+        height: 200px;
         object-fit: cover;
         transition: all 0.3s ease;
         z-index: $z1;
@@ -588,39 +580,51 @@ $z4: 1000;
 
     &__desc {
       padding: 0 6%;
-      font-size: 1.1vw;
+      font-size: 1.2vw;
       line-height: 1.8;
       letter-spacing: 3;
-      color: #585858;
-      margin-bottom: 2vw;
+      color: #000000;
+      margin-top: 1vw;
+      margin-bottom: 1vw;
       font-weight: 300;
     }
 
     &__btn {
-      position: absolute;
-      bottom: 3vw;
-      right: 0px;
+      position: relative;
+      width: 100%;
 
       button {
         display: block;
         width: 110px;
-        padding: 10px 0;
-        background-color: #d8ab95;
+        height: 110px;
+        border-radius: 50%;
+        background-color: #000;
         color: #fff;
         margin-bottom: 1vw;
         font-size: 12px;
         font-weight: 400;
         text-transform: uppercase;
+
+        &:nth-child(1) {
+          position: absolute;
+          bottom: -60px;
+          left: -60px;
+
+          
+        }
+
+        &:hover {
+          background-color: #585858;  
+          color: #fff;
+        }
+
+        // &:nth-child(2) {
+        //   position: absolute;
+        //   bottom: -60px;
+        //   right: -60px;
+        // }
       }
     }
-
-    // .arrow {
-    //   position: absolute;
-    //   width: 35px;
-    //   bottom: 10%;
-    //   right: 10%;
-    //   cursor: pointer;
-    // }
   }
 
   .dice {
