@@ -1,4 +1,4 @@
-// 글자가 좌측 기준으로 90%만큼 왔을 때 등장하는 애니메이션
+// 글자가 좌측 기준으로 75%만큼 왔을 때 등장하는 애니메이션
 const setTransform = () => {
   const siteworkTit = document.querySelectorAll('.sitework-tit span');
   // x좌표 백분율 구하기
@@ -9,7 +9,7 @@ const setTransform = () => {
 
   siteworkTit.forEach(e => {
     siteworkTitPer = getPercent(e);
-    if (siteworkTitPer < 0.9) {
+    if (siteworkTitPer < 0.75) {
       e.style.transform = 'translateX(0)';
       e.style.opacity = 1;
     } else {
@@ -92,8 +92,8 @@ const setScriptTitUp = (startScroll, speed) => {
 window.addEventListener('scroll', function () {
   setTransform();
   setProgressNum(6500);
-  setCoverBar(15000);
-  setScriptTitUp(15500, 100);
+  setCoverBar(19000);
+  setScriptTitUp(19500, 100);
 });
 
 // 스크롤 확인
