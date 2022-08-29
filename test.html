@@ -27,6 +27,7 @@
       width: 100%;
       /* perspective: 1000px; */
       background-color: #000;
+      transform-style: preserve-3d;
     }
 
     .circle {
@@ -149,13 +150,26 @@
       font-size: 12vw;
       color: rgba(255, 255, 255, 0.9);
     }
+    .box {
+      width: 90vw;
+      height: 90vh;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #000;
+      border: 5px solid #fff;
+      border-radius: 20px;
+      opacity: .9;
+    }
   </style>
 </head>
 
 <body>
   <div class="fixed">
     <div class="wrap" data-2500="transform:scale(0)" data-3500="transform:scale(1)"><div id="checkerboard" data-2500="background-position: 0 0, 50px 50px" data-4000="background-position: 0 100px, 50px 150px"></div></div>
-    <h3 class="tit" data-3500="font-size:0vw; color: rgba(255, 255, 255, 0)" data-6000="font-size:10vw; color: rgba(255, 255, 255, 0.9)">FRONTEND</h3>
+    <h3 class="tit" data-3500="font-size:0vw; color: rgba(255, 255, 255, 0)" data-5000="font-size:10vw; color: rgba(255, 255, 255, 1)" data-6000="font-size:25vw; color: rgba(255, 255, 255, 0)">FRONTEND</h3>
+    <div class="box" data-6000="width:0vw; height:0vh; opacity:0" data-9000="width:90vw; height:90vh; opacity:.8"></div>
     <div class="circle s1"
       data-0="top:100%; transform: translate(-50%, -50%) rotateZ(60deg) rotateY(0deg) scale(1); opacity:0;"
       data-300="top:50%; transform: translate(-50%, -50%) rotateZ(60deg) rotateY(360deg) scale(1); opacity:1"
@@ -212,7 +226,7 @@
     window.addEventListener('scroll', function(){
       let scrollTop = window.scrollY;
       
-      if(scrollTop>2500 && scrollTop <6000){
+      if(scrollTop>2500 && scrollTop <9000){
         let move = (scrollTop - 2500) / 2;
         checkerboard.style.backgroundPosition = `0 ${move}px, 50px ${50+move}px`
       }
