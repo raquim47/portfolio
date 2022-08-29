@@ -46,18 +46,18 @@ const setCoverBar = (startScroll => {
         e.style.visibility = 'visible';
         setTimeout(function () {
           e.style.width = '100%'
-        }, 100 * i);
+        }, 150 * i);
       });
     } else {
       barName.forEach((e, i) => {
         setTimeout(function () {
           e.style.width = '0%'
-        }, 100 * i);
+        }, 150 * i);
         // e.style.visibility = 'hidden';
       });
     };
   };
-  setBar(coverRow1);
+  // setBar(coverRow1);
   setBar(coverRow2);
 });
 // SCRIPT 글자쪼개기
@@ -93,7 +93,7 @@ window.addEventListener('scroll', function () {
   setTransform();
   setProgressNum(6500);
   setCoverBar(19000);
-  setScriptTitUp(19500, 100);
+  setScriptTitUp(20000, 100);
 });
 
 // 스크롤 확인
