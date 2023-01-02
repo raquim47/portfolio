@@ -8,13 +8,37 @@ body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,tabl
 a {
   color: inherit; text-decoration: none;
 }
-
+@font-face {
+  font-family: 'NEXON Lv1 Gothic';
+  src: url(../fonts/NEXON_Lv1_Gothic_OTF.woff);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NEXON Lv1 Gothic bold';
+  src: url(../fonts/NEXON_Lv1_Gothic_OTF_Bold.woff);
+  /* font-weight: normal; */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NEXON Lv1 Gothic light';
+  src: url(../fonts/NEXON_Lv1_Gothic_OTF_Light.woff);
+  /* font-weight: normal; */
+  font-style: normal;
+}
 /* 폰트 초기화 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+  /* font-weight: normal; */
+  font-style: normal;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 body, input, textarea, select, button, table {
   font-family:  'Noto Sans KR', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; color: #222; font-size: 13px; line-height: 1.6;
-}
+} */
 
 /* 폰트 스타일 초기화 */
 em,address {
@@ -24,11 +48,6 @@ em,address {
 /* 블릿기호 초기화 */
 ul,li,ol {
   list-style: none;
-}
-
-/* 제목 태그 초기화 */
-h1,h2,h3,h4,h5,h6 {
-  font-size: 13px; font-weight: normal;
 }
 
 /* 버튼 초기화 */
