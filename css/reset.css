@@ -1,7 +1,8 @@
 /* 여백 초기화 */
-body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,table,th,td,tr,textarea,button,form,figure,figcaption{
+body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,table,th,td,tr,textarea,button,form,figure,figcaption,aside,main,section,article,footer,nav{
   margin:0;
   padding:0;
+  box-sizing: border-box;
 }
 
 /* a 링크 초기화 */
