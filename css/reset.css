@@ -1,5 +1,10 @@
+body {
+  font-family: 'NEXON Lv1 Gothic';
+}
+
+
 /* 여백 초기화 */
-body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,table,th,td,tr,textarea,button,form,figure,figcaption,aside,main,section,article,footer,nav{
+body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,table,th,td,tr,textarea,button,form,figure,figcaption,aside,main,section,article,footer,nav,svg{
   margin:0;
   padding:0;
   box-sizing: border-box;
@@ -18,23 +23,26 @@ a {
 @font-face {
   font-family: 'NEXON Lv1 Gothic bold';
   src: url(../fonts/NEXON_Lv1_Gothic_OTF_Bold.woff);
-  /* font-weight: normal; */
+  font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'NEXON Lv1 Gothic light';
   src: url(../fonts/NEXON_Lv1_Gothic_OTF_Light.woff);
-  /* font-weight: normal; */
+  font-weight: normal;
   font-style: normal;
 }
 /* 폰트 초기화 */
-@font-face {
-  font-family: 'NEXON Lv1 Gothic OTF';
+/* @font-face { */
+  /* font-family: 'NEXON Lv1 Gothic OTF';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
   /* font-weight: normal; */
-  font-style: normal;
-}
+  /* font-style: normal; */
+/* }  */
 
+strong {
+  font-family: 'NEXON Lv1 Gothic bold';
+}
 /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 body, input, textarea, select, button, table {
