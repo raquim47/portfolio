@@ -3,14 +3,13 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 @font-face {
     font-family: 'NEXON Lv1 Gothic';
-    src: url('/fonts/NEXON_Lv1_Gothic_OTF.woff') format('woff'),
-        url('/fonts/NEXON_Lv1_Gothic_OTF_Light.woff') format('woff');
+    src: url('${process.env.PUBLIC_URL}/fonts/NEXON_Lv1_Gothic_OTF.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
 @font-face {
     font-family: 'NEXON Lv1 Gothic Bold';
-    src: url('/fonts/NEXON_Lv1_Gothic_OTF_Bold.woff') format('woff');
+    src: url('${process.env.PUBLIC_URL}/fonts/NEXON_Lv1_Gothic_OTF_Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }

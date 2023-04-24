@@ -193,19 +193,23 @@ function Banner() {
             <strong>Study</strong>
           </Link>
           <a
-            href='https://github.com/yourusername'
+            href='https://github.com/raquim47'
             target='_blank'
             rel='noopener noreferrer'
           >
             <strong>GitHub</strong>
           </a>
-          <a herf='#'>
+          <a
+            href='https://velog.io/@raquim47'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <strong>Velog</strong>
           </a>
         </SideBarNav>
         <SideBarInfo>
           <p>raquim47@naver.com</p>
-          <p>Last Update : 23.01.01</p>
+          <p>Last Update : 23.04.10</p>
         </SideBarInfo>
       </SideBar>
     </Wrapper>

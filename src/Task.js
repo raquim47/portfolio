@@ -22,10 +22,13 @@ const LeftSection = styled.section`
     font-size: 36px;
     @media screen and (max-width: 960px) {
       font-size: 30px;
-  }
+    }
   }
   flex: 1;
   margin-right: 50px;
+  @media screen and (max-width: 960px) {
+    margin-right: 10px;
+  }
 `;
 
 const Tachs = styled.div`
@@ -38,7 +41,12 @@ const Tachs = styled.div`
     display: inline-block;
   }
 `;
-
+const Intro = styled.div`
+  line-height: 1.8;
+  padding: 15px 20px;
+  background-color: #EBEBEB;
+  border-radius: 5px;
+`
 const Overview = styled.div`
   display: flex;
   flex-direction: column;
@@ -77,6 +85,7 @@ function Task({ data }) {
             ))}
           </Tachs>
         )}
+        {data.intro && <Intro>{data.intro}</Intro>}
         <Overview>
           {data.overviews.map((overview, i) => (
             <OverviewText text={overview} key={i} />
