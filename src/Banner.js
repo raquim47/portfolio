@@ -157,7 +157,7 @@ const SideBarInfo = styled.div`
 function Banner() {
   const [isMounted, setIsMounted] = useState(false);
   useEffect(() => {
-    setIsMounted(true);
+    setTimeout(setIsMounted(true), 300);
   }, []);
 
   return (
